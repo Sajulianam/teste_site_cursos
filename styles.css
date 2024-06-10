@@ -1,0 +1,183 @@
+/* Estilos gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 120vh;
+    background-color: #f4f4f4;
+}
+
+#banner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('1Banner\ login.png');
+    /* Corrigindo o caminho da imagem */
+    background-size: cover;
+    /* Para ajustar a imagem dentro do contêiner sem cortar */
+    background-repeat: no-repeat;
+    background-position: inherit;
+
+}
+
+form {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+form .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form .header img {
+    max-width: 100%;
+
+}
+
+form .header p {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+form .titulo {
+    font-size: 2.9vh;
+    font-weight: bold;
+}
+
+form .desc {
+    padding-top: 10px;
+    font-size: 1.5vh;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+form .entradas {
+    display: flex;
+    padding-top: 2vh;
+
+}
+
+form .entradas button {
+    padding: 5px 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+form .entradas button:hover {
+    background-color: #e4e4e4;
+}
+
+form .divisao {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+form .divisao p {
+    margin: 20px 10px;
+    font-size: 0.9em;
+
+}
+
+form .divisao::before,
+form .divisao::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#nome,
+#senha {
+    width: 100%;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.check {
+    width: 100%;
+
+    display: flex;
+}
+
+.textCheck {
+    font-size: 10px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.usuario, .password {
+    width: 100%;
+}
+
+.recSenha {
+    display: block;
+    padding-top: 5vh;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+}
+
+.senha {
+    color: blue;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #banner {
+        display: none;
+    }
+
+    form {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

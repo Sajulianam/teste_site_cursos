@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="banner"></div>
+        <form id="login-form">
+            <div class="header">
+                <img src="3Frame 1527.png" alt="">
+            </div>
+            <div>
+                <p class="titulo">
+                    Boas-vindas!
+                </p>
+                <div class="desc">
+                    <p>Entre utilizando uma das opções abaixo</p>
+                </div>
+            </div>
+            <div class="entradas">
+                <img src="4Redes de cadastro.png" alt="" width="350px">
+            </div>
+            <div class="divisao">
+                <p>ou</p>
+            </div>
+            <label for="nome">Usuário</label>
+            <input class="usuario" type="text" id="username" name="username" required>
+
+            <label for="senha">Senha</label>
+            <input class="password" type="password" id="password" name="password" required>
+
+            <div class="check">
+                <input type="checkbox" name="manterConectado">
+                <label class="textCheck" for="manterConectado">Manter conectado</label>
+            </div>
+
+            <button type="submit">Enviar</button>
+            <div id="container-login">
+                <h1 id="h1-login">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="recSenha">
+                        <p>Esqueceu sua senha? <strong class="senha">Recuperar senha</strong></p>
+                    </div>
+                </h1>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simulando a autenticação do usuário (mock)
+            if (username === 'usuario' && password === 'senha') {
+                // Login bem-sucedido
+                alert('Login bem-sucedido');
+            } else {
+                // Login falhou, exibe mensagem de erro
+                alert('Usuário ou senha incorretos');
+            }
+        });
+    </script>
+</body>
+
+</html>
